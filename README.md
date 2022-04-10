@@ -1,1 +1,1 @@
-# SI_2022_lab1_163102
+Stevo Veljanoski 163102
