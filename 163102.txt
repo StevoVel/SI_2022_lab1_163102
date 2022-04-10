@@ -1,0 +1,166 @@
+Чекор 3: 
+git clone https://github.com/StevoVel/SI_2022_lab1_163102
+Чекор 4:
+cd SI_2022_lab1_163102 
+Чекор 5:
+touch shopping_list.txt
+vim shopping_list.txt 
+git add shopping_list.txt
+git commit -m "Add 5 items to the shopping list"
+Чекор 6:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m "Add quantities to the items"
+Чекор 7:
+git branch branch2
+git branch branch1
+додавање на 2 гранки
+Чекор 8:
+$ git log
+commit 34f28b5f2e089bbcf59ef44afd3cc80641bfdd55 (HEAD -> master, branch2, branch1)
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:10:05 2022 +0200
+
+    Add quantities to the items
+
+commit b2433cc54dcf1d95dad39b5abc106d905f25f36f
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:09:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 674c8bc2b192457c48921703577a580dad9db815 (origin/master, origin/HEAD)
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:02:12 2022 +0200
+
+    Update README.md
+
+commit e10338f2d52e9539ae2924306fe05676c9bf12e7
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:01:51 2022 +0200
+
+    Initial commit
+
+
+Чекор 9:
+git push origin master
+git push origin branch2
+git push origin branch1
+Синхронизирање
+Чекор 10:
+git checkout branch1
+Префрлување на друга гранка
+Чекор 11:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #5”
+Чекор 12:
+git checkout master
+Чекор 13:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #2”
+Чекор 14:
+git push origin master
+git push origin branch2
+git push origin branch1
+Синхронизирање
+Чекор 15:
+git branch branch2
+Друга гранка
+Чекор 16:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit -m “Change quantity of item #5”
+Чекор 17:
+$ git log
+--
+commit 24bb549dd7511e4ffa5c864aad9af3d28dd4d29c (HEAD -> branch2)
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:13:51 2022 +0200
+
+    Change quantity of item #5
+
+commit 34f28b5f2e089bbcf59ef44afd3cc80641bfdd55 (origin/branch2)
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:10:05 2022 +0200
+
+    Add quantities to the items
+
+commit b2433cc54dcf1d95dad39b5abc106d905f25f36f
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:09:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 674c8bc2b192457c48921703577a580dad9db815
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:02:12 2022 +0200
+
+    Update README.md
+
+commit e10338f2d52e9539ae2924306fe05676c9bf12e7
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:01:51 2022 +0200
+
+
+    Initial commit
+Чекор 18:
+vim shopping_list.txt
+git add shopping_list.txt
+git commit --amend -m "Modify item #4 and add item #6"
+Чекор 19:
+$ git log
+-----
+
+commit 084a3525a1c2a4e38b01cb1e64b81b7d62a86a1d (HEAD -> branch2)
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:13:51 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 34f28b5f2e089bbcf59ef44afd3cc80641bfdd55 (origin/branch2)
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:10:05 2022 +0200
+
+    Add quantities to the items
+
+commit b2433cc54dcf1d95dad39b5abc106d905f25f36f
+Author: Stevo Veljanoski <stevo.veljanoski@gmail.com>
+Date:   Sun Apr 10 19:09:13 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 674c8bc2b192457c48921703577a580dad9db815
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:02:12 2022 +0200
+
+    Update README.md
+
+commit e10338f2d52e9539ae2924306fe05676c9bf12e7
+Author: StevoVel <62548485+StevoVel@users.noreply.github.com>
+Date:   Sun Apr 10 19:01:51 2022 +0200
+
+    Initial commit
+
+
+Чекор 20:
+git checkout master
+
+git merge branch1
+$ git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Чекор 21:
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Чекор 22:
+git add 163102.txt
+git commit -m "Add docs"
+Чекор 23:
+git push origin master

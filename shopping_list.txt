@@ -1,5 +1,7 @@
 Beer x 6
 Ketchup x 2
 Cookies x 2
-Milk x 2
+Milk x 1
 Noodles x 4
+Cheese x 1
+
